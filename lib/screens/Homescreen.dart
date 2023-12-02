@@ -52,7 +52,7 @@ class _HomecsreenState extends State<Homecsreen> {
                               },
                               icon: const Icon(Icons.image_sharp),
                               label: const Text('Gallery')),
-                          SizedBox(
+                          const SizedBox(
                             width: 30,
                           ),
                           ElevatedButton.icon(
@@ -80,7 +80,6 @@ class _HomecsreenState extends State<Homecsreen> {
         photo1 = File(img1.path);
         image = photo1!.path;
       });
-      print(image);
       final imageModel = imagemodel(image: image!);
       addphoto(imageModel);
     }
@@ -94,7 +93,6 @@ class _HomecsreenState extends State<Homecsreen> {
         photo1 = File(img1.path);
         image = photo1!.path;
       });
-      print(image);
       final imageModel = imagemodel(image: image!);
       addphoto(imageModel);
     }

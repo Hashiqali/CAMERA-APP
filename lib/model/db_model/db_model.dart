@@ -1,3 +1,4 @@
+// ignore: camel_case_types
 class imagemodel {
   int? id;
   final String image;

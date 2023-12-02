@@ -1,6 +1,7 @@
 import 'package:camera/screens/Homescreen.dart';
 import 'package:flutter/material.dart';
 
+// ignore: camel_case_types
 class splash extends StatefulWidget {
   const splash({super.key});
 
@@ -8,6 +9,7 @@ class splash extends StatefulWidget {
   State<splash> createState() => _splashState();
 }
 
+// ignore: camel_case_types
 class _splashState extends State<splash> {
   @override
   void initState() {
@@ -27,9 +29,10 @@ class _splashState extends State<splash> {
   }
 
   Future<void> log() async {
-    await Future.delayed(Duration(seconds: 1));
+    await Future.delayed(const Duration(seconds: 1));
+    // ignore: use_build_context_synchronously
     Navigator.of(context).push(MaterialPageRoute(
-      builder: (ctx) => Homecsreen(),
+      builder: (ctx) => const Homecsreen(),
     ));
   }
 }

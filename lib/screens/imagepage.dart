@@ -3,6 +3,7 @@ import 'package:camera/model/db_model/db_function.dart';
 import 'package:camera/model/db_model/db_model.dart';
 import 'package:flutter/material.dart';
 
+// ignore: camel_case_types
 class imagepage extends StatefulWidget {
   const imagepage({super.key});
 
@@ -10,6 +11,7 @@ class imagepage extends StatefulWidget {
   State<imagepage> createState() => _imagepageState();
 }
 
+// ignore: camel_case_types
 class _imagepageState extends State<imagepage> {
   @override
   Widget build(BuildContext context) {
@@ -55,7 +57,7 @@ class _imagepageState extends State<imagepage> {
                                                   context: context,
                                                   builder: (ctx) {
                                                     return AlertDialog(
-                                                      content: Text(
+                                                      content: const Text(
                                                           'if you want to delete'),
                                                       actions: [
                                                         TextButton(
@@ -64,7 +66,8 @@ class _imagepageState extends State<imagepage> {
                                                                       context)
                                                                   .pop();
                                                             },
-                                                            child: Text('No')),
+                                                            child: const Text(
+                                                                'No')),
                                                         TextButton(
                                                             onPressed: () {
                                                               deleteimage(
@@ -73,7 +76,8 @@ class _imagepageState extends State<imagepage> {
                                                                       context)
                                                                   .pop();
                                                             },
-                                                            child: Text('Yes')),
+                                                            child: const Text(
+                                                                'Yes')),
                                                       ],
                                                     );
                                                   });

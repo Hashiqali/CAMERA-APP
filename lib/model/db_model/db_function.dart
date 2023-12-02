@@ -20,14 +20,11 @@ Future<void> addphoto(imagemodel value) async {
 
 Future<void> getallimage() async {
   final values = await db.rawQuery('SELECT * FROM image');
-  print(values);
-
   imagelistNotifer.value.clear();
 
   values.forEach((map) {
     final images = imagemodel.fromMap(map);
     imagelistNotifer.value.add(images);
-    print(images);
   });
   imagelistNotifer.notifyListeners();
 }
